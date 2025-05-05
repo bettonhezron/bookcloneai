@@ -30,9 +30,7 @@ const Hero = ({ darkMode }) => {
     Get Api Access
   </a>
 </div>
-
-
-        <div className="mt-8 py-2 px-4 bg-transparent text-yellow-400 inline-block">
+       <div className="mt-8 py-2 px-4 bg-transparent text-yellow-400 inline-block">
           <p>
             Attention:TryBookAI has been acquired by Indicus AI. Indicus LLM will be used for text and image generation
           </p>
