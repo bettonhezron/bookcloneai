@@ -2,8 +2,7 @@ import React from "react";
 import { Users, BookOpen, Paintbrush } from "lucide-react";
 
 const Roadmap = ({ darkMode }) => {
-  // Roadmap section data
-  const roadmap = [
+    const roadmap = [
     {
       icon: <Users size={24} />,
       title: "Advanced Character Development",

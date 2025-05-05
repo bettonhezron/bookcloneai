@@ -1,7 +1,6 @@
 import React from "react";
 
 const SampleBooks = ({ darkMode }) => {
-  // Sample books data
   const sampleBooks = [
     {
       genre: "Science Fiction",
@@ -31,10 +30,15 @@ const SampleBooks = ({ darkMode }) => {
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         {sampleBooks.map((book, index) => (
-          <div key={index} className="text-center">
+          <div
+            key={index}
+            className={`rounded-2xl p-6 shadow-lg transition transform hover:scale-105 hover:shadow-2xl duration-300 ${
+              darkMode ? "bg-gray-800 text-white" : "bg-white text-black"
+            }`}
+          >
             <div className="mb-4 mx-auto w-48 h-60 relative">
               <img
-                src="/api/placeholder/192/240"
+                src="./paradox.png"
                 alt={`${book.genre} book cover`}
                 className="w-full h-full object-cover rounded-md"
               />
@@ -47,7 +51,7 @@ const SampleBooks = ({ darkMode }) => {
             >
               {book.excerpt}
             </p>
-            <a href="#" className="text-purple-400 hover:text-purple-300">
+            <a href="#" className="text-purple-400 hover:text-white">
               Read More
             </a>
           </div>

@@ -46,7 +46,7 @@ const BookAIClone = () => {
         />
       )}
 
-      <Hero />
+      <Hero darkMode={darkMode} />
       <BookGenerator darkMode={darkMode} />
       <Features darkMode={darkMode} />
       <HowItWorks darkMode={darkMode} />

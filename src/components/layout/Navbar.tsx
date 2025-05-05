@@ -1,10 +1,11 @@
 import React from "react";
-import { Sun, Moon, BookOpen } from "lucide-react";
+import { Sun, Moon } from "lucide-react";
 
 const Navbar = ({ darkMode, toggleDarkMode, toggleMobileMenu }) => {
   return (
-    <header className="container mx-auto p-4 flex justify-between items-center">
-      <div className="flex items-center">
+    <header className="container mx-auto px-8 py-4 flex justify-between items-center bg-transparent"> 
+      {/* Logo */}
+      <div className="flex items-center space-x-3 ml-24"> 
         <img
           src="./logo.png"
           alt="logo"
@@ -13,28 +14,60 @@ const Navbar = ({ darkMode, toggleDarkMode, toggleMobileMenu }) => {
         <h1 className="text-2xl font-bold">BookAI</h1>
       </div>
 
-      <nav className="hidden md:flex space-x-6">
-        <a href="#features" className="hover:text-purple-400">
+      {/* Nav Links */}
+      <nav className="hidden md:flex space-x-5 lg:space-x-8 ml-auto items-center text-[16px] lg:text-[17px] font-medium">
+        <a
+          href="#features"
+          className={`hover:text-purple-400 ${
+            darkMode ? "text-[#E0E0E0]" : "text-gray-800"
+          }`}
+        >
           Features
         </a>
-        <a href="#how-it-works" className="hover:text-purple-400">
+        <a
+          href="#how-it-works"
+          className={`hover:text-purple-400 ${
+            darkMode ? "text-[#E0E0E0]" : "text-gray-800"
+          }`}
+        >
           How it Works
         </a>
-        <a href="#roadmap" className="hover:text-purple-400">
+        <a
+          href="#roadmap"
+          className={`hover:text-purple-400 ${
+            darkMode ? "text-[#E0E0E0]" : "text-gray-800"
+          }`}
+        >
           Roadmap
         </a>
-        <a href="#" className="hover:text-purple-400">
+        <a
+          href="#"
+          className={`hover:text-purple-400 ${
+            darkMode ? "text-[#E0E0E0]" : "text-gray-800"
+          }`}
+        >
           Api
         </a>
-        <a href="#" className="hover:text-purple-400">
+        <a
+          href="#"
+          className={`hover:text-purple-400 ${
+            darkMode ? "text-[#E0E0E0]" : "text-gray-800"
+          }`}
+        >
           Price
         </a>
-        <a href="#" className="hover:text-purple-400">
+        <a
+          href="#"
+          className={`hover:text-purple-400 ${
+            darkMode ? "text-[#E0E0E0]" : "text-gray-800"
+          }`}
+        >
           Models
         </a>
       </nav>
 
-      <div className="flex items-center space-x-4">
+      {/* Right icons */}
+      <div className="flex items-center space-x-4 ml-4 lg:ml-6">
         <button
           onClick={toggleDarkMode}
           className="p-2 rounded-full hover:bg-gray-700"
@@ -44,7 +77,7 @@ const Navbar = ({ darkMode, toggleDarkMode, toggleMobileMenu }) => {
         </button>
         <a
           href="#"
-          className="hidden md:block bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-md transition-colors"
+          className="hidden md:block bg-gradient-to-r from-blue-500 to-blue-300 py-4 text-xl rounded-lg hover:from-blue-600 hover:to-blue-400 w-[220px] text-center"
         >
           Login/Sign Up
         </a>

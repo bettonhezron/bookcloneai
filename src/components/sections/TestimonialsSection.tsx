@@ -1,7 +1,6 @@
 import React from "react";
 
 const Testimonials = ({ darkMode }) => {
-  // User testimonials
   const testimonials = [
     {
       quote:
