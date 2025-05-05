@@ -17,8 +17,8 @@ const Hero = ({ darkMode }) => {
         </p>
 
         <div className="flex flex-wrap justify-center gap-4 mb-16"> 
-  <a
-    href="#"
+       <a
+       href="#"
     className="bg-gradient-to-r from-blue-500 to-blue-300 hover:from-blue-600 hover:to-blue-400 text-white py-3 px-8 rounded-full text-lg transition-colors"
   >
     Get Started

@@ -3,9 +3,9 @@ import { Sun, Moon } from "lucide-react";
 
 const Navbar = ({ darkMode, toggleDarkMode, toggleMobileMenu }) => {
   return (
-    <header className="container mx-auto px-8 py-4 flex justify-between items-center bg-transparent"> 
-      {/* Logo */}
-      <div className="flex items-center space-x-3 ml-24"> 
+    <header className="container mx-auto px-8 py-4 flex justify-between items-center bg-transparent">
+      {/* Logo on the left */}
+      <div className="flex items-center space-x-3">
         <img
           src="./logo.png"
           alt="logo"
@@ -14,7 +14,7 @@ const Navbar = ({ darkMode, toggleDarkMode, toggleMobileMenu }) => {
         <h1 className="text-2xl font-bold">BookAI</h1>
       </div>
 
-      {/* Nav Links */}
+      {/* Nav Links - Hidden on mobile */}
       <nav className="hidden md:flex space-x-5 lg:space-x-8 ml-auto items-center text-[16px] lg:text-[17px] font-medium">
         <a
           href="#features"
@@ -66,21 +66,26 @@ const Navbar = ({ darkMode, toggleDarkMode, toggleMobileMenu }) => {
         </a>
       </nav>
 
-      {/* Right icons */}
+      {/* Right icons and mobile menu button */}
       <div className="flex items-center space-x-4 ml-4 lg:ml-6">
+        {/* Theme toggle button, only visible on large screens */}
         <button
           onClick={toggleDarkMode}
-          className="p-2 rounded-full hover:bg-gray-700"
+          className="p-2 rounded-full hover:bg-gray-700 hidden md:block"
           aria-label={darkMode ? "Switch to light mode" : "Switch to dark mode"}
         >
           {darkMode ? <Sun size={20} /> : <Moon size={20} />}
         </button>
+
+        {/* Login Button */}
         <a
           href="#"
           className="hidden md:block bg-gradient-to-r from-blue-500 to-blue-300 py-4 text-xl rounded-lg hover:from-blue-600 hover:to-blue-400 w-[220px] text-center"
         >
           Login/Sign Up
         </a>
+
+        {/* Mobile Menu Button */}
         <button
           className="md:hidden text-white"
           onClick={toggleMobileMenu}
